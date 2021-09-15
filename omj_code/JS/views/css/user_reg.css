@@ -1,0 +1,78 @@
+
+* {
+  margin: 5px;
+  padding: 5px;
+
+}
+
+.cw {
+  float: left;
+}
+
+.bt {
+  float: right;
+}
+
+#body {
+  width: 100%;
+}
+
+#reg {
+  width: 500px;
+  margin: 100px auto;
+  overflow: hidden;
+}
+#reg h1{
+  margin: 50px auto ;
+  text-align: center;
+  color: #C40D2E;
+}
+#reg .reg_xx{
+  margin: 0 110px ;
+}
+.info{
+  width:100%;
+  float: left;
+  margin-top: 50px;
+  /* text-align: center; */
+}
+.info table{
+  margin: auto;
+}
+.info tr td{
+  line-height: 50px;
+}
+.info tr td:first-child{
+  width: 30%;
+}
+.info tr td:last-child{
+  width: 70%;
+}
+.sex,.sexx{
+  width: 30%;
+  vertical-align: middle;
+}
+.info tr td input{
+  /* width: 90%; */
+  height: 20px;
+  outline: none;
+  vertical-align: middle;
+  margin: 0 5px 0 20px;
+}
+.info tr td:last-child{
+  text-align: center;
+}
+.info tr td #tj{
+  width: 200px;
+  margin: auto;
+  height: 30px;
+  background-color: transparent;
+  border: 1px solid #e9e9e9;
+  color: #555;
+  transition: .3s;
+}
+.info tr td #tj:hover{
+  background-color: #C40D2E;
+  border: 1px solid #C40D2E;
+  color: #FFF;
+}

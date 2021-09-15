@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>用户列表</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      text-decoration: none;
+      list-style: none;
+    }
+    #h1{
+      margin: 50px 100px 20px;
+    }
+    #user_list table{
+      width: 1200px;
+      border-color: #000;
+      border-collapse: collapse;
+      margin: 50px 100px 20px;
+      text-align: center;
+    }
+    /* #user_list table th{
+      width: 200px;
+    } */
+  </style>
+</head>
+<body>
+  <h1 id="h1">用户列表</h1><br>
+  <hr>
+
+  <div id="user_list">
+    <table border=1px; cellpadding=>
+      <thead>
+        <tr>
+          <th>用户编号</th>
+          <th>用户姓名</th>
+          <th>用户性别</th>
+          <th>用户电话</th>
+          <th>用户密码</th>
+          <th>用户头像</th>
+          <th>用户邮箱</th>
+          <th>用户操作</th>
+        </tr>
+      </thead>
+      <tbody id="list">
+        <!-- <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr> -->
+      </tbody>
+    </table>
+  </div>
+
+
+  <script>
+    var list = document.getElementById('list');
+
+
+    ajax();
+    function ajax(){
+      var xhr = new XMLHttpRequest();
+      xhr.onreadystatechange = function(){
+        if(xhr.readyState == 4){
+          if(xhr.status >= 200 && xhr.status < 300){
+            var result = JSON.parse(xhr.responseText);
+            //console.log(result);
+            li(result.data);
+          }else{
+            console.log('返回错误');
+          }
+        }
+      }
+      xhr.open("GET","/v1/admin/user_list",true);
+      xhr.send();
+    }
+
+    function li(arr){
+      var str = '';
+      for(var i = 0; i < arr.length; i++){
+        str += `
+          <tr>
+            <td>${arr[i].uid}</td>
+            <td>${arr[i].uname}</td>
+            <td>${arr[i].sex}</td>
+            <td>${arr[i].phone}</td>
+            <td>${arr[i].upwd}</td>
+            <td ><img style="width:30px" src="${arr[i].photo}/5 (${arr[i].uid}).png"></td>
+            <td>${arr[i].email}</td>
+            <td>
+              <button onclick=del(${arr[i].uid})>删除</button>
+              <button><a href="./user_info.html">修改</a></button>
+            </td>
+          </tr>
+        `;
+      }
+      list.innerHTML = str;
+    }
+
+    function del(id){
+      console.log(id);
+      var xhr = new XMLHttpRequest();
+      xhr.onreadystatechange = function(){
+        if(xhr.readyState == 4){
+          if(xhr.status >= 200 && xhr.status < 300){
+            var result = JSON.parse(xhr.responseText);
+            console.log(result);
+            //调用ajax
+            if(result.code){
+              ajax();
+            }
+            
+          }else{
+            console.log('返回错误');
+          }
+        }
+      }
+      xhr.open("DELETE","/v1/admin/del",true);
+      xhr.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+      xhr.send(`uid=${id}`);
+    }
+  </script>
+
+
+</body>
+</html>

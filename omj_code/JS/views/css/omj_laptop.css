@@ -1,0 +1,193 @@
+*{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none !important;
+}
+.bg{
+  width: 100%;
+}
+.bner{
+  width: 100%;
+  height: 400px;
+  /* border: 1px solid #FFF; */
+  background-image: url(../image/bgimg/page-06-watchfinder-header-large.jpg);
+  background-size: cover;
+  position: relative;
+}
+.bner p{
+  color: #FFF;
+  font-size: 50px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+/* 搜索框 */
+.sous{
+  width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+  border: 1px solid #e2e2e2;
+  box-sizing: border-box;
+  /* position: relative; */
+}
+.sous input{
+  font-size: 22px;
+  font-weight: 700;
+  width: 100%;
+  height: 72px;
+  text-align: center;
+  outline: none;
+  vertical-align: top;
+  border: none;
+  padding: 0 72px;
+  box-sizing: border-box;
+  
+}
+
+.sous button{
+  width: 72px;
+  height: 72px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  background-image: url(../image/sousuo/搜索框.png);
+  background-repeat: no-repeat;
+  background-size: 30px;
+  background-position: center;
+  transform: scaleX(-1);
+  border-right: 1px solid #e2e2e2;
+  position: absolute;
+  right: 0;
+}
+
+.main{
+  margin-top: 30px;
+  overflow: hidden;
+}
+/* 左侧导航栏 */
+.left_nav{
+  width: 25%;
+  /* border: 1px solid #000; */
+  box-sizing: border-box;
+  padding-left: 70px;
+  float: left;
+  overflow: hidden;
+}
+.left_nav .num{
+  width: 100%;
+  /* height: 30px; */
+  background-color: #f9f9f9;
+  padding-left: 60px;
+  /* box-sizing: border-box; */
+}
+.left_nav .num .y{
+  color: #c40d2e;
+  line-height: 70px;
+}
+.shuaixuan{
+  color: #757575;
+  border-bottom: 1px solid #d0d0d0;
+}
+.shuaixuan h2{
+  font-size: 30px;
+  line-height: 90px;
+}
+.left_nav .flist{
+  color: #6d6d6d;
+  /* float: left; */
+  width: 100%;
+}
+.left_nav .flist ul{
+  width: 100%;
+}
+.left_nav .flist ul li{
+  width: 100%;
+  line-height: 65px;
+  border-bottom: 1px solid #d0d0d0;
+}
+/* 右侧商品列表 */
+.shopp_list{
+  float: left;
+  width: 75%;
+  /* border: 1px solid #000; */
+  box-sizing: border-box;
+  padding-left: 30px;
+  
+}
+.shopp_list .row{
+  width: 95%;
+  margin: auto;
+}
+.shopp_list ul{
+  display: flex;
+}
+/* .shopp_list ul li{
+  border: 1px solid #d0d0d0;
+} */
+.shopp_list ul li img{
+  width: 100%;
+}
+.shopp_list ul li {
+  padding-bottom: 20px;
+  margin-bottom: 30px;
+}
+.shopp_list ul li:hover button{
+  display: block;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.shopp_list div{
+  color: #555;
+  text-align: center;
+  font-size: 14px;
+  position: relative;
+}
+.shopp_list div a{
+  color: #555;
+}
+.shopp_list div p{
+  margin: 5px 0;
+}
+.shopp_list  div p:nth-child(3) {
+  margin-top: 10px !important;
+}
+
+/* 立即选购 隐藏 */
+.shopp_list  div button{
+  display: none;
+  position: absolute;
+  
+  bottom: -1;
+}
+
+.shopp_list  div button {
+  padding: 5px 10px;
+  color: #FFF;
+  background-color: #c40d2e;
+  border: 1px solid #c40d2e;
+}
+.shopp_list  div button:hover {
+  cursor: pointer;
+  color:#c40d2e;
+  background-color: transparent;
+}
+@media  (max-width:768px ){
+  .left_nav{
+    display: none;
+  }
+  .shopp_list{
+    width: 100%;
+  }
+}
+@media  (min-width:768px) and (max-width:992px) {
+  .left_nav{
+    width: 30%;
+  }
+  .shopp_list{
+    width: 70%;
+  }
+}

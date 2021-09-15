@@ -1,0 +1,114 @@
+.addr-main{
+  margin: 103px auto 0;
+  width: 1300px;
+  color: #555;
+}
+.addr-add{
+  color: #c40d2e;
+  text-align: center;
+  padding: 50px 0 50px;
+}
+.addr-form .cw{
+  width: 200px;
+  margin-bottom: 15px;
+}
+.addr-form .cw .sex{
+  width: 100%;
+  height: 50px;
+  display: flex;
+  background-color: #f9f9f9;
+  border: 1px solid #e2e2e2;
+  align-items: center;
+
+}
+.addr-form .cw .sex>div{
+  width: 50%;
+  text-align: center;
+}
+.addr-form .cw .sex>div label{
+  margin: 0;
+}
+.addr-form .uname input{
+  width: 100%;
+  height: 50px;
+  outline: none;
+  background-color: #f9f9f9;
+  border: 1px solid #e2e2e2;
+  padding: 0 10px;
+}
+.addr-form .shengshi,
+.addr-form .city-qu,
+.addr-form .yzbm{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin: 15px 0;
+}
+.addr-form .shengshi>div,
+.addr-form .city-qu>div,
+.addr-form .yzbm>div{
+  width: 50%;
+}
+.addr-form .shengshi>div select,
+.addr-form .city-qu>div select,
+.addr-form .city-qu>div input,
+.addr-form .yzbm>div input{
+  width: 99%;
+  height: 50px;
+  outline: none;
+  background-color: #f9f9f9;
+  border: 1px solid #e2e2e2;
+  outline: none;
+  padding: 0 10px;
+}
+/* 隐私政策 */
+.addr-main .yszc a{
+  color: #555;
+  font-size: 12px;
+}
+.addr-main .yszc a:hover{
+  color: #c40d2e;
+  font-size: 12px;
+}
+.addr-main .moren-addr,
+.addr-main .yszc,
+.addr-main .save{
+  cursor: pointer;
+}
+/* 保存地址 */
+.addr-main .save{
+  width: 200px;
+  /* height: 50px; */
+  text-align: center;
+  margin: 0 auto 50px;
+  position: relative;
+  overflow: hidden;
+}
+.addr-main .save .txt{
+  width: 100%;
+  line-height: 50px;
+  background-color: transparent;
+  border: 1px solid #e2e2e2;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+  transition: .3s;
+
+}
+.addr-main .save .yy{
+  width: 100%;
+  height: 50px;
+  background-color: #c40d2e;
+  position: absolute;
+  top: 52px;
+  z-index: 0;
+  transition: .3s;
+}
+.addr-main .save:hover .txt{
+  color: #FFF;
+  border: 1px solid #c40d2e;
+
+}
+.addr-main .save:hover .yy{
+  top: 1px;
+}

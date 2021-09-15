@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>欧米茄管理员登录</title>
+  <style>
+    *{
+      text-decoration: none;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      font-family: 'Times New Roman', Times, serif;
+    }
+    #login-body{
+      width: 1010px;
+      margin: 100px auto;
+    }
+    #login-body h1{
+      width: 50%;
+      margin: 20px auto;
+      color: #C40D2E;
+      text-align: center;
+    }
+    #login-left{
+      width: 50%;
+      /* float: left; */
+      margin: 0 auto;
+    }
+    #login-right{
+      width: 500px;
+      float: right;
+    }
+    #btn{
+      color: #555;
+      font-size: 14px;
+      background: #FFF;
+      margin: 0px 0px 0px;
+      padding: 0px 40px;
+    }
+    
+    /* .btn a{
+      color: #555;
+      font-size: 16px;
+      float: left;
+    } */
+    .login{
+      background: #FBFBFB;
+      margin: 10px 10px 18px;
+      padding: 10px 20px;
+      /* height: 3000px; */
+      border: 1px #000 solid;
+      text-align: left;
+    }
+    .login input{
+      border: none;
+      background: #FBFBFB;
+    }
+    .login-log{
+      background: #FFF;
+      margin: 50px 10px 18px;
+      padding: 10px 20px;
+      /* height: 3000px; */
+      border: 1px #000 solid;
+      text-align: center;
+    }
+   .login-log button{
+     border: none;
+   }
+   .a{
+      color: #555;
+      font-size: 16px;
+      float: left;
+    }
+    .info{
+     margin: 0px 15px;
+     height: 20px;
+     padding: 1px 5px;
+   }
+   #login-body h2{
+     
+     font-size: 16px;
+   }
+  </style>
+  
+</head>
+<body>
+  <div id="login-body">
+    <h1>欧米茄管理员登录</h1>
+    <div id="login-left">
+      
+      <h2>我已有账户</h2>
+      <div class="login">
+        <label for="" class="placeholder">管理员账号</label>
+        <input type="text" name="" id="aname" class="info" placeholder="请输入账号">
+      </div>
+      <div class="login">
+        <label for="" class="placeholder">管理员密码</label>
+        <input type="text" name="" id="apwd" class="info" placeholder="请输入密码">
+      </div>
+
+      <div class="a">
+        <a href="#">忘记密码？</a>
+        <a href="./user_login.html">用户登录</a>
+        <a href="./user_list.html" id="list" style="margin: 0px 0px 0px 200px;"></a>
+        <br>
+      </div>
+
+      <div class="login-log">
+            <button id="btn" >登录</button>
+      </div>
+      
+  
+    </div>
+
+    <!-- <div class="login-right">
+      <h2>我没有账户</h2>
+    </div> -->
+  </div>
+  
+
+  <script>
+    var aname = document.getElementById('aname');
+    var apwd = document.getElementById('apwd');
+    var btn = document.getElementById('btn');
+    var list = document.getElementById('list');
+
+    btn.onclick = function(){
+      var anameval = aname.value;
+      var apwdval = apwd.value;
+      if(notEmpty(anameval) && notEmpty(apwdval)){
+        ajax(anameval,apwdval);
+      }else{
+        alert('输入不能为空');
+      }
+    }
+
+    function ajax(a,b){
+      var xhr = new XMLHttpRequest();
+      xhr.onreadystatechange = function(){
+        if(xhr.readyState == 4){
+          if(xhr.status >= 200 && xhr.status < 300){
+            var result = JSON.parse(xhr.responseText);
+            
+            console.log(result);
+            if(result.code){
+              // console.log(result);
+              alert(result.msg);
+              // list.innerHTML = "进入用户列表";
+              btn.innerHTML = `<a href="./user_list.html">进入后台</a>`;
+            }else{
+              alert(result.msg);
+            }
+          }else{
+            console.log('返回结果错误');
+          }
+        }
+      }
+      xhr.open("POST","/v1/admin/login",true);
+      xhr.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+      xhr.send(`aname=${a}&apwd=${b}`);
+    }
+
+    function notEmpty(a){
+      // 去除空白
+      var str = a.trim();
+      return str.length;
+    }
+
+  </script>
+
+
+
+</body>
+</html>

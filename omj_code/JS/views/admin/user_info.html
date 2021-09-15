@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../CSS/user_info.css">
+  <title>Document</title>
+  <style>
+    *{
+  margin: 0;
+  padding: 0;
+  font-family: "宋体";
+}
+#info{
+  width: 1050px;
+  margin: 0px auto;
+}
+#info .information{
+  color: #C40D2E;
+  font-size: 26px;
+  text-align: center;
+  padding: 70px 0px 40px;
+}
+#info .h3{
+  /* <h3>个人信息</h3> */
+  width: 1050px;
+  font-size: 14px;
+  border-top: 1px solid #979797;
+  border-bottom: 1px solid #979797;     
+  text-align: left;
+}
+#info .h3 h3{
+  line-height: 3em;
+}
+#info_top{
+  margin: 30px auto 0px;
+}
+#info .cw p{
+  font-size: 14px;
+  line-height: 28px;
+  margin-bottom: 10px;
+}
+#info .cw .input{
+  width: 500px;
+  height: 50px;
+  border: 1px solid #e2e2e2;
+  background-color: #fbfbfb;
+  text-align: center;
+}
+#info .cw .input .nan{
+  display: block;
+  width: 50%;
+  height: 50px;
+  float: left;
+}
+#info .cw .input .nv{
+  display: block;
+  width: 50%;
+  height: 50px;
+  float: left;
+}
+/* #info .cw .input input{
+  margin: 17px 0px;
+} */
+/* 输入框位置 */
+#info .cw .input label{
+  line-height: 50px;
+}
+.name{
+  width: 100%;
+  height: 50px;
+  background-color: #fbfbfb;
+  border: 1px solid #e3e3e3;
+  margin: 10px 0px;
+  padding: 0px 20px;
+}
+.name label{
+  position: absolute;
+  z-index: 11;
+  line-height: 50px;
+  /* margin: 0px 0px 0px -130px; */
+}
+.name input{
+  width: 90%;
+  height: 48px;
+  border: none;
+  background-color: #fbfbfb;
+  vertical-align: middle;
+  padding: 0px 0px 0px 50px;
+  font-size: 20px;
+  outline: none;
+}
+.phone{
+  width: 100%;
+  height: 50px;
+  background-color: #fbfbfb;
+  border: 1px solid #e3e3e3;
+  margin: 10px 0px;
+  padding: 0px 20px;
+}
+.phone label{
+  position: absolute;
+  z-index: 11;
+  line-height: 50px;
+  /* margin: 0px 0px 0px -130px; */
+}
+.phone input{
+  width: 90%;
+  height: 48px;
+  border: none;
+  background-color: #fbfbfb;
+  vertical-align: middle;
+  /* padding: 0px 0px 0px 75px; */
+  font-size: 20px;
+  outline: none;
+}
+
+  </style>
+</head>
+<body>
+  <div id="info">
+    <!-- 账户信息 -->
+    <div class="information"><h2>账户信息</h2></div>
+    <!-- 个人信息标签 -->
+    <div class="h3"><h3>个人信息</h3></div>
+
+    <!-- 称谓 名字 -->
+    <div id="info_top">
+      <!-- 称谓 -->
+      <div class="cw">
+        <p>称谓*</p>
+        <div class="input">
+          <div class="nan">
+            <input type="radio" name="sex" id="nan" value="1"><label for="nan">先生</label> 
+          </div>
+          <div class="nv">
+            <input type="radio" name="sex" id="nv" value="0"><label for="nv">女士</label> 
+          </div>
+          
+        </div>
+        
+      </div>
+      <!-- 名字 -->
+      <div class="name">
+        <label for="xm">姓名*</label>
+        <input type="text" name="name" id="xm">
+      </div>
+      <!-- 电话号码 -->
+      <div class="phone">
+        <label for="ph">电话号码*</label>
+        <input type="text" name="name" id="ph">
+      </div>
+    </div>
+    
+
+
+  </div>
+  
+  
+</body>
+</html>

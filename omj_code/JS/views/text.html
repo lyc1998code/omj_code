@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/bootstrap.css">
+  <script src="./js/jquery.min.js"></script>
+  <script src="./js/popper.min.js"></script>
+  <script src="./js/bootstrap.min.js"></script>
+  <title>测试用</title>
+  <style>
+    
+  </style>
+</head>
+
+<body>
+  
+        <!-- 手风琴 -->
+        <div id="sfq">
+          <!-- 每块内容分为一张卡片 -->
+          <div class="card">
+            <!-- 按钮控制内容的合并、打开 -->
+            <button class="btn btn-success" data-target="#a" data-toggle="collapse"> 
+              打开合并一张卡内容
+            </button>
+            <!-- collapse类名隐藏元素 -->
+            <!-- 通过data-parent获取祖先元素的id名，实现每次都只打开一张卡片-->
+            <div class="collapse" id="a" data-parent="#sfq">11111111111111</div>
+          </div>
+          <!-- 第二张卡片 -->
+          <div class="card">
+            <button class="btn btn-success " data-target="#b" data-toggle="collapse">
+              打开合并一张卡内容
+            </button>
+            <div class="collapse" id="b" data-parent="#sfq">22222222222222</div>
+          </div>
+          <!-- 第三张卡片 -->
+          <div class="card">
+            <button class="btn btn-success " data-target="#c" data-toggle="collapse">
+              打开合并一张卡内容
+            </button>
+            <div class="collapse" id="c" data-parent="#sfq">333333333333333</div>
+          </div>
+    
+        </div>
+    
+  
+</body>
+
+</html>

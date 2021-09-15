@@ -1,0 +1,242 @@
+
+*{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+.footer{
+  width: 100%;
+  background-color: #fff;
+  padding: 35px 0 0;
+}
+
+.footer .flist{
+  width: 100%;
+  height: 170px;
+  /* margin: 0 auto; */
+  background-color: #f9f9f9;
+  
+}
+.footer .flist ul{
+  width: 1250px;
+  margin:  auto;
+  overflow: hidden;
+  text-align: center;
+  box-sizing: border-box;
+  padding: 35px 0;
+}
+.footer .flist ul li{
+  width: 20%;
+  height: 100px;
+  float: left;
+  
+}
+.footer .flist ul li a{
+  color: #555;
+  text-decoration: none;
+}
+.footer .flist ul li:hover a span{
+  color: #c40d2e;
+}
+.footer .flist ul li a img{
+  width: 30%;
+} 
+.footer .flist ul li span{
+  width: 250px;
+  display: block;
+}
+
+/* second */
+.fsecond{
+  width: 1600px;
+  margin: 0 auto;
+  /* border: 1px solid #000; */
+  box-sizing: border-box;
+  display: flex;
+  text-align: center;
+  padding-top: 70px;
+}
+.fsecond .left,
+.fsecond .right{
+  width: 50%;
+  /* height: 50px; */
+  box-sizing: border-box;
+  /* border: 1px solid #F00; */
+  /* overflow: hidden; */
+  position: relative;
+}
+.clearfix{
+  content: '';
+  display: block;
+  clear: both;
+}
+.fsecond .left>div{
+  width: 80%;
+  text-align: left;
+  padding-left: 200px;
+  box-sizing: border-box;
+}
+.fsecond .left h2{
+  font-size: 12px;
+  color: #555;
+  margin: 5px 0 20px 0;
+}
+.fsecond .left input{
+  width: 55%;
+  height: 40px;
+  outline: none;
+  padding-left: 15px;
+  border: 1px solid #e2e2e2;
+  background-color: #fff;
+  margin: 0;
+  box-sizing: border-box;
+  vertical-align: bottom;
+  font-size: 16px;
+}
+.fsecond .left button{
+  color: #FFF;
+  width: 100px;
+  height: 40px;
+  border: 1px solid #C40D2E;
+  background-color: #C40D2E;
+  margin: 0;
+  position: relative;
+  left: -5px;
+  bottom: 0;
+  font-size: 14px;
+}
+.fsecond .right>div{
+  width: 100%;
+  height: 81px;
+  text-align: left;
+  border-left: 1px solid #e2e2e2;
+  box-sizing: border-box;
+  padding-left: 40px;
+}
+.fsecond .right h2{
+  font-size: 12px;
+  color: #555;
+  margin: 5px 0 20px 0;
+} 
+.fsecond .right ul{
+  display: flex;
+}
+.fsecond .right ul li {
+  box-sizing: border-box;
+  padding: 0 10px 0 0;
+}
+.fsecond .right img{
+  width: 30px;
+  /* height: 30px; */
+  /* margin-right: 20px; */
+}
+.fsecond .right ul+li{
+  position: relative;
+}
+.fsecond .right ul li .ewm{
+  display: none;
+  position: absolute;
+  width: 200px;
+  top: -200px;
+  left: -50px;
+}
+
+/* .right div ul li:hover .ewm{
+  display: block;
+} */
+.fsecond .right div ul li svg:hover path{
+  fill: #C40D2E;
+}
+.fsecond .right div ul li:hover .ewm{
+  display: block;
+}
+
+/* 分类 */
+.fmenu{
+  width: 1600px;
+  box-sizing: border-box;
+  /* border: 1px solid #F00; */
+  margin: 0 auto;
+}
+.menu{
+  width: 1250px;
+  margin: 50px auto;
+  /* border: 1px solid #000; */
+}
+.menu_item ul{
+  margin-bottom: 30px;
+}
+.menu_item ul li a{
+  color: #555;
+  font-size: 13px;
+  text-decoration: none;
+}
+.menu_item ul li{
+  width: 300px;
+}
+.menu_item ul:nth-child(5){
+  flex-wrap: wrap;
+}
+.menu_item ul li:hover a{
+  color: #C40D2E;
+}
+.menu_item{
+  display:flex;
+  /* 两端对齐 */
+  justify-content: space-between;
+  /* 换行 */
+  flex-wrap: wrap;
+}
+
+/* 版权 */
+.copy{
+  width: 100%;
+  padding: 20px 0 30px ;
+  background-color: #f9f9f9;
+}
+.copy .center{
+  width: 1600px;
+  margin: 0 auto;
+}
+.copy .item{
+  width: 1250px;
+  margin: 0 auto;
+  font-size: 12px;
+}
+.copy .item ul{
+  display: flex;
+  overflow: hidden;
+  padding: 10px 0;
+}
+.copy .item ul li:not(.y)::before{
+  content: '|';
+  color: #cecece;
+  margin: 0 20px 0;
+  font-size: 13px;
+}
+/* .copy .item ul li::before{
+  content: '|';
+  color: #cecece;
+  margin: 0 20px 0 20px;
+  font-size: 13px;
+  
+} */
+.copy .item ul li a{
+  color: #555;
+  text-decoration: none;
+}
+.copy .item ul li a:hover{
+  color: #C40D2E;
+}
+.copy .item ul li:nth-child(2) a::before{
+  content: url(../image/copy/police.png);
+  vertical-align: middle;
+  margin-right: 5px;
+  
+}
+.copy .item ul li:nth-child(3) a::before{
+  content: url(../image/copy/police.png);
+  vertical-align: middle;
+  margin-right: 5px;
+}

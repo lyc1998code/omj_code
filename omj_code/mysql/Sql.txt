@@ -1,0 +1,183 @@
+-h127.0.0.1 -P3306 -uroot -p
+server->database->table->row->column
+域名和端口可以省略；
+简写形式：m ysql -uroot
+quit
+退出
+
+删除数据库
+drop database if exists 数据库名
+
+create database 数据库名 (
+	id int primary key,#primary key   主键约束   通常加在编号列，会加快数据的查找速度
+);
+
+show databases;
+查看所有的数据库
+
+use mysql;
+进入指定的数据库
+
+show tables;
+显示当前数据库下的所有数据表
+
+create table 表名（
+  id int unique;(uniuqe 唯一约束)
+）
+
+desc 数据表名称；
+描述数据表中都有哪些列
+
+插入数据
+insert into student values('1','li'); 
+（数值型可以不加 引号）
+
+查询
+select * from student
+过滤重复项
+select distinct sex from emp;
+排序（order by  以…排序）如果不加排序规则，默认升序排序
+select * from dept order by did asc;#（desc 降序）
+如果工资相同，则按照年龄排序
+select * from emp order by salary desc,brithday asc;
+查询编号为5的员工
+select * from emp where eid=5;
+查询部门编号不为10的员工有哪些
+select * from dept where did!=10;
+查询部门编号为null的员工有哪些
+select * from emp where deptId is null;
+查询部门编号不为null的员工有哪些
+select * from emp where deptId is not null;
+查询工资在8000以上的男员工有哪些
+select * from emp where salary>8000 and/(&&)  sex=1;
+查询工资在6000~8000之间
+select * from emp where salary>6000 && salary<8000;
+select * from emp where salary between 6000 and 8000;
+查询工资小于6000或大于8000之间
+select * from emp where salary<6000 || salary>8000;
+查询工资不在6000和8000之间
+select * from emp where salary not between 6000 and 8000;
+查询出20或30号部门的员工有哪些
+select * from emp where deptId in(20,30);
+查询出不在20或30号部门的员工有哪些
+select * from emp where deptId not in(20,30);
+（模糊查询  % _ 结合like关键字使用）查询出姓名中含有e的员工姓名
+select * from emp where ename like '%e%';
+（模糊查询）查询出姓名中倒数第二个含有e的员工姓名
+ select * from emp where ename like '%e_';
+
+#修改数据
+update user set phone = '156456897',email = 'qwe@163.com' where uid = '1';
+
+#删除数据delete
+delete from user where uid = '2'; 
+
+
+
+primary key     主键（ id int primary key ）
+not null           非空( title varchar() not null )
+unique            唯一约束 (price decimal(7,2) unique )
+default '未知'   默认值( sex boolean default '男' )
+insert into family values(50,default);#默认值
+insert into family(fid) values(60);#没有出现的列自动应用默认值
+check( score >= 0 and score <= 100 )   检查约束 (mysql不支持检查约束，会极大影响数据的插入速度。后期由js来完成)
+
+ #外键   把familyId设置为外键列，插入的值必须得在family表fid中出现过
+ foreign key(familyId) references family(fid)
+
+auto_increment 自增
+
+#简单查询
+(1)查询特定的列
+ 示例：查询出所有员工的编号和姓名
+select eid,ename from emp;
+
+
+#起别名
+select eid as 编号,ename as 姓名 from emp;
+
+sql命令
+结构化查询语言，用于操作关系型数据库服务器，主要是对数据的增删改查
+
+sql命令的执行方式：
+交互模式：在客户端输入一行，点击回车，服务器就会执行一行，适用于临时性查看数据
+脚本模式：写在一个文档中，
+（mysql -uroot < 拖拽文件）
+
+#..............单行注释
+/*..........*/多行注释
+
+习惯上关键字大写
+
+
+
+分页显示
+需要两个已知的条件：当前的页码，每页的数据量
+每页开始的值 = （当前的页码-1）*每页的数据量；
+select * from emp limit 开始的值（0），每页数据量（5）;
+
+聚合函数：
+count()/sum()/avg()/max()/min()
+使用员工编号列查询所有员工的数量
+select count(eid) from emp;
+
+分组查询：group by
+select count(eid),avg(salary),sex,ename from emp group by sex;
+
+查询出1993年出生的员工有哪些
+select * from emp where year(brithday)=1993;
+
+子查询：多个sql命令的组合，把一个sql命令的结果作为另一个sql命令的条件
+示例：查询出工资最高的员工
+步骤1.查询出工资的最高值---5000
+select max(salary) from emp;
+步骤2.通过最高值查询出员工
+select * from emp where salary=5000;
+综合：select * from emp where salary=( select max(salary) from emp );
+
+
+
+多表查询
+要查询的列分布在不同的表中，前提表之间已经建立了联系
+例如：查询出所有员工的姓名及其部门名称
+select ename,dname from emp,dept where deptId=did;
+防止表名冲突（加上表名）
+select emp.ename,dept.dname from emp,dept where emp.deptId=dept.did;
+
+内连接
+select ename,dname from emp inner join dept on deptId=did;
+
+左外连接
+select ename,dname from emp left outer join dept on deptId=did;
+（outer关键字可以省略）
+显示左侧表中所有的记录，先写哪个表哪个就是左
+
+右外连接
+select emp.ename,dept.dname from emp right outer join dept on deptId=did;
+显示右侧表中所有的记录，后写哪个表哪个就是右
+
+myslq不支持全链接
+
+
+全链接
+union  联合后，不合并相同的记录
+union  all 联合后，合并相同的记录
+select ename,dname from emp left outer join dept on deptId=did;
+
+union
+
+select emp.ename,dept.dname from emp right outer join dept on deptId=did;
+
+
+
+
+
+
+
+
+
+
+
+
+
+

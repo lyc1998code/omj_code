@@ -1,0 +1,104 @@
+/* 欧米茄星座系列 */
+*{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  /* color: #555; */
+}
+a{
+  text-decoration: none !important;
+}
+.main{
+  position: relative;
+  padding-bottom: 50px;
+  background-color: #FFF;
+}
+.bg{
+  width: 100%;
+  height: 400px;
+  background-image: url(../image/bgimg/CO_Constellation_imgTetiere_large_1.jpg);
+  background-size: cover;
+  position: fixed;
+  top: 0;
+  z-index: -1;
+}
+.bg .text{
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.bg .text p{
+  color: #FFF;
+  font-size: 100px;
+  line-height: 400px;
+}
+.con-center{
+  width: 100%;
+  margin-top: 400px;
+  padding-top: 100PX;
+  background-color: #FFF;
+}
+.con-center .first,
+.con-center .second{
+  width: 1600px;
+  margin: auto;
+  text-align: center;
+}
+.con-center .first h2,
+.con-center .second h2{
+  color: #c40d2e !important;
+  letter-spacing: .3em;
+  margin-bottom: 30px;
+}
+.list {
+  display: flex;
+  justify-content: center;
+  flex-flow: wrap;
+}
+.list .item{
+  width: 363px;
+  font-size: 14px;
+}
+.list .item .txt:hover p,
+.list .item .txt:hover span{
+  color: #c40d2e !important;
+}
+.list .item .txt{
+  color: #555;
+}
+.list .item .txt p{
+  font-weight: 700;
+  margin: 30px 0 6px;
+  letter-spacing: .1em;
+}
+.liulan{
+  margin: 80px 0;
+}
+.liulan a{
+  display: inline-block;
+  width: 200px;
+  height: 50px;
+  line-height: 50px;
+  color: #555;
+  border: 1px solid #e2e2e2;
+  transition: 0.5s;
+  /* position: relative; */
+}
+/* .yying{
+  width: 200px;
+  height: 50px;
+  display: inline-block;
+  margin: 0;
+  background-color: #c40d2e;
+} */
+.liulan a:hover{
+  color: #FFF !important;
+  border: 1px solid #c40d2e;
+  background-color: #c40d2e;
+}
+.second .list .item{
+  width: 300px;
+  font-size: 14px;
+}

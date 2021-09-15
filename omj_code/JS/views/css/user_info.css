@@ -1,0 +1,276 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "宋体";
+  list-style: none;
+  text-decoration: none;
+}
+.big-pic {
+  width: 100%;
+  height: 400px;
+  background-image: url(../image/bgimg/MyOmega-ImgTetiere-medium_1.jpg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  position: fixed;
+  top: 100px;
+  z-index: -1;
+}
+.big-pic h3 {
+  font-size: 60px;
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+/* 主体导航 */
+.main-nav {
+  width: 100%;
+  height: 50px;
+  background-color: #f9f9f9;
+  margin-top: 500px;
+}
+.main-nav ul {
+  width: 1600px;
+  display: flex;
+  margin: auto;
+  justify-content: space-around;
+}
+.main-nav ul li a {
+  color: #555;
+  text-decoration: none;
+  line-height: 50px;
+}
+.main-nav ul li:hover a {
+  color: #c40d2e;
+}
+/* 主体 */
+.main {
+  background-color: #fff;
+  padding: 0 0 20px;
+  overflow: hidden;
+}
+.main h3 {
+  color: #c40d2e;
+  width: 1600px;
+  margin: auto;
+  text-align: center;
+  padding: 50px 0 30px;
+}
+/* 个人信息 */
+.main .user_info {
+  width: 1300px;
+  margin: auto;
+}
+.main .user_info > p {
+  color: #555;
+  line-height: 50px;
+  border-top: 1px solid #e2e2e2;
+  border-bottom: 1px solid #e2e2e2;
+}
+/* 称谓 */
+.main .user_info .chengwei .sex-items {
+  display: flex;
+  width: 200px;
+  border: 1px solid #e2e2e2;
+  background-color: #fbfbfb;
+}
+.main .user_info .chengwei .sex-items .mr,
+.main .user_info .chengwei .sex-items .mrs {
+  width: 50%;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.main .user_info .uname,
+.main .user_info .uphone .phone,
+.main .user_info .uphone .phone-yzm,
+.user_info .county {
+  width: 100%;
+  position: relative;
+  /* display: inline-block; */
+}
+.main .user_info .uname input,
+.main .user_info .uphone input {
+  width: 100%;
+  font-size: 16px;
+  background-color: #fbfbfb;
+  outline: none;
+  padding: 0 10px;
+  margin: 20px 0;
+  border: 1px solid #e2e2e2;
+  line-height: 50px;
+}
+/* label */
+.main .user_info .uname label,
+.main .user_info .uphone .phone .uphone-label,
+.main .user_info .uphone .phone-yzm .yzm-label,
+.user_info .county .county-label {
+  position: absolute;
+  top: 0;
+  left: 20px;
+  font-size: 10px;
+  transform: translateY(50%);
+  background-color: #fff;
+}
+.main .user_info .uphone .phone {
+  padding: 0;
+  display: flex;
+  width: 100%;
+}
+.main .user_info .uphone .phone button {
+  width: 20%;
+  font-size: 16px;
+  background-color: #fbfbfb;
+  outline: none;
+  margin: 20px 0 20px 10px;
+  border: 1px solid #e2e2e2;
+  line-height: 30px;
+  cursor: pointer;
+}
+
+/* 出生日期 */
+.user_info .birthday > p {
+  margin: 0;
+}
+.user_info .birthday .date {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.user_info .birthday .date > div {
+  width: 31%;
+  /* margin: 0 20px 0 0; */
+  /* background-color: slategray; */
+}
+.user_info .birthday .date > div select,
+.user_info .county select {
+  width: 100%;
+  padding: 0 20px;
+  outline: none;
+  border: 1px solid #e2e2e2;
+  margin: 20px 0;
+  height: 50px;
+  background-color: #fbfbfb;
+}
+/* 保存我的信息 */
+.user_info .save {
+  margin: auto;
+  width: 300px;
+  height: 50px;
+  position: relative;
+  overflow: hidden;
+}
+.user_info .save .butn {
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  margin: auto;
+  border: 1px solid #e2e2e2;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+  transition: 0.3s;
+}
+.user_info .save .yy {
+  width: 100%;
+  height: 50px;
+  background-color: #c40d2e;
+  position: absolute;
+  top: 100%;
+  transition: 0.3s;
+  z-index: 0;
+}
+.user_info .save .butn:hover {
+  color: #fff;
+}
+.user_info .save:hover .yy {
+  transform: translateY(-50px);
+}
+.address {
+  width: 1300px;
+  margin: auto;
+}
+.address .moren-addr {
+  width: 50%;
+}
+.address .moren-addr h4,
+.address .other-addr h4 {
+  border-top: 1px solid #e2e2e2;
+  border-bottom: 1px solid #e2e2e2;
+  font-size: 16px;
+  line-height: 50px;
+}
+.address .moren-addr .xxxx,
+.address .other-addr {
+  font-size: 14px;
+  color: #555;
+  padding: 10px 0 20px;
+  font-weight: 600;
+}
+.address .moren-addr .xxxx p,
+.address .other-addr p {
+  margin: 5px 0;
+}
+.address .moren-addr .xxxx a,
+.address .other-addr .aniu span a {
+  color: #555;
+  text-decoration: underline;
+}
+.address .moren-addr .xxxx a:hover,
+.address .other-addr .aniu span:hover a {
+  color: #c40d2e;
+}
+/* 我的其他地址 */
+.address .other-addr h4 {
+  font-weight: 700;
+}
+.address .other-addr > div {
+  display: flex;
+  flex-wrap: wrap;
+}
+.address .other-addr .addr-item {
+  width: 50%;
+}
+/* 添加新地址 */
+.address .other-addr .add-addr {
+  width: 200px;
+  /* height: 50px; */
+  margin: 50px auto;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+.address .other-addr .add-addr div:first-child {
+  width: 100%;
+  background-color: transparent;
+  border: 1px solid #e2e2e2;
+  line-height: 50px;
+  position: relative;
+  z-index: 1;
+}
+.address .other-addr .add-addr div:first-child a{
+  text-decoration: none;
+  color: #555;
+  border: none;
+}
+.address .other-addr .add-addr div:last-child {
+  width: 100%;
+  background-color: #c40d2e;
+  height: 50px;
+  position: absolute;
+  top: 52px;
+  z-index: 0;
+  transition: 0.3s;
+}
+.address .other-addr .add-addr div:first-child:hover {
+  border: 1px solid #c40d2e;
+}
+.address .other-addr .add-addr div:first-child:hover a{
+  color: #fff;
+}
+.address .other-addr .add-addr:hover div:last-child {
+  top: 1px;
+}

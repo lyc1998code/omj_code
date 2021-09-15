@@ -1,0 +1,143 @@
+
+* {
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+#login-body {
+  width: 1030px;
+  margin: 100px auto;
+  overflow: hidden;
+}
+
+#login-body h1 {
+  width: 50%;
+  margin: 20px auto;
+  color: #C40D2E;
+}
+
+#login-left {
+  width: 500px;
+  float: left;
+}
+
+#login-right {
+  width: 500px;
+  float: left;
+  box-sizing: border-box;
+  padding-left: 30px;
+}
+
+.a {
+  color: #555;
+  font-size: 16px;
+}
+
+.login {
+  background: #FBFBFB;
+  margin: 10px 10px 18px;
+  padding: 10px 20px;
+  /* height: 3000px; */
+  border: 1px #000 solid;
+  text-align: left;
+}
+
+.login input {
+  border: none;
+  outline: none;
+  background-color: #FBFBFB;
+}
+
+.login-log {
+  background: #FFF;
+  height: 50px;
+  width: 480px;
+  /* box-sizing: border-box; */
+  /* border: 1px #000 solid; */
+  text-align: center;
+  overflow: hidden;
+  padding: 0 10px;
+  position: relative;
+}
+ 
+.login-log .aniu {
+  width: 100%;
+  height: 50px;
+  color: #555;
+  font-size: 14px;
+  background: transparent;
+  margin: 0px 0px 0px;
+  border: 1px #000 solid;
+  cursor: pointer;
+  transition: .3s;
+}
+.login-log .aniu:hover{
+  border: 1px solid #C40D2E;
+  background-color: #C40D2E;
+  color: #FFF;
+}
+/* .login-log .aniu+div{
+  width: 480px;
+  height: 50px;
+  background-color: #C40D2E;
+  position: absolute;
+  top: 50px;
+  left: 10px;
+  z-index: -1;
+}
+.login-log .aniu:hover +div{
+  transform: translateY(-50px);
+} */
+#login-right .login-reg{
+  width: 480px;
+  height: 50px;
+  margin-top: 120px;
+}
+#login-right .login-reg button{
+  width: 480px;
+  height: 50px;
+  background-color: transparent;
+  transition: .3s;
+}
+#login-right .login-reg button:hover{
+  background-color: #C40D2E;
+  border: 1px solid #C40D2E;
+  color: #FFF;
+}
+
+.info {
+  margin: 0px 15px;
+  height: 20px;
+  padding: 1px 5px;
+}
+
+.placeholder {
+  display: inline-block;
+  width: 65px;
+}
+
+#login-body h2 {
+  font-size: 16px;
+}
+
+.huo {
+  height: 50px;
+  margin-top: 50px;
+  border-top: 1px solid #e2e2e2;
+  text-align: center;
+}
+
+.huo span {
+  background-color: #FFF;
+  display: inline-block;
+  font-size: 20px;
+  transform: translate3D(0, -12px, 0);
+  /* padding: 0 20px; */
+}
+
+.zdy-zh p{
+  margin: 10px 0 0;
+}

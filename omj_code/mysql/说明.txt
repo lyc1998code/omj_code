@@ -1,0 +1,17 @@
+1.在app.js下创建web服务器
+2.在路由器文件user.js下，创建路由器对象，添加用户注册路由（post /reg），响应‘注册成功’，最后导出路由对象
+3.在app.js下引入用户路由器（./routes/user.js）,使用路由器并添加前缀/v1/users.js
+4.在app.js下使用中间件body-parser将post请求的数据解析为对象
+5.在路由中获取post传递的数据（req.body），格式为对象
+6.在连接池模块pool.js下，引入mysql模块，创建连接池对象，导出对象
+7.在user.js下引入连接池模块(../pool.js),使用引入的连接池执行sql命令，将数据插入到xz_user表
+8.在user.js下添加 用户登录路由（post /login），获取传递的数据，验证各项是否为空，执行sql命令，判断是否成功{code:200,msg:'登陆成功'}{code:201,msg:'登陆失败'}
+9.在user.js下,修改用户资料的路由(post /),传递(email,phone,user_name,gender,uid),获取传递的数据，验证各项是否为空，执行sql命令，判断是否修改成功。
+{code:200,msg:'修改成功'} {code:201,msg:'修改失败'}
+10.添加检索用户路由（get /编号），获取传递的编号，执行mysql命令查询是否有该用户。{code:200,msg:'查询成功'，data:[]} {code:201,msg:'查无此人'}
+//检测用户是否被占用
+//检测邮箱是否被占用
+//检测手机是否被占用
+11用户列表（get  /）传递当前的页码pno和每页的数据量count，执行SQL命令(分页查询)，将查询到数据响应到客户端 {code:200,msg:'查询成功', data:[]}
+   http://127.0.0.1:8080/v1/users?pno=1&count=9
+12删除用户(delete /编号)，获取传递编号，执行SQL命令，删除指定的数据，最后响应  {code: 200, msg:'删除成功'}   {code:201,msg:'删除失败'}

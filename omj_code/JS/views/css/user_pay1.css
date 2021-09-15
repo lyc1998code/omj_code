@@ -1,0 +1,281 @@
+*{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  color: #555;
+}
+/* nav */
+.nav{
+  width: 100%;
+  margin: auto;
+  /* background-color: #e2e2e2; */
+  text-align: center;
+}
+.nav .nav-logo{
+  width: 100%;
+  margin: auto;
+  text-align: center;
+  /* background-color: #555; */
+  position: relative;
+  padding: 10px 0;
+
+}
+.nav .nav-logo img{
+  width: 100px;
+  display: block;
+  margin: auto;
+}
+.nav .txt{
+  height: 100%;
+  position: absolute;
+  right: 100px;
+  top: 50%;
+  transform: translateY(-25%);
+}
+.nav .txt>span:hover,
+.nav .txt>span a svg:hover path{
+  color: #c40d2e;
+  fill: #c40d2e;
+}
+.tishi{
+  width: 100%;
+  margin: auto;
+  background-color: #c40d2e;
+  text-align: center;
+}
+/* 特别注意 */
+.tishi p{
+  color: #FFF;
+  line-height: 80px;
+}
+/* 主体 */
+.pay-main{
+  width: 100%;
+  margin: auto;
+}
+/* 步骤 */
+.pay-main .pay-buzhou{
+  width: 100%;
+  padding: 50px 0;
+  text-align: center;
+  font-size: 36px;
+}
+.pay-main .pay-buzhou span{
+  color: #c40d2e;
+}
+/* 详情 */
+.pay-main .details{
+  width: 1300px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+.pay-main .details .details-l{
+  width: 56%;
+  /* overflow: hidden; */
+  box-sizing: border-box;
+  /* border: 1px solid #e2e2e2; */
+}
+/* 配送 */
+.pay-main .details .peisong p{
+  line-height: 50px;
+  background-color: #555;
+  color: #fff;
+  padding: 0 0 0 10px;
+  /* box-sizing: border-box; */
+}
+/* 配送地址-模块 */
+.pay-main .details .addr-mk{
+  border: 1px solid #e2e2e2;
+}
+/* 配送地址 */
+.pay-main .details .addr-mk .ps-addr p{
+  padding-left: 20px;
+  line-height: 50px;
+}
+/* 提示信息 */
+.details .addr-mk .tsxx{
+  margin: 10px 20px;
+  line-height: 50px;
+  background-color: #f9f9f9;
+  padding: 10px 20px ;
+}
+.details .addr-mk .tsxx i{
+  color: #c40d2e;
+}
+/* 地址列表 */
+.details .addr-mk .addr-list{
+  padding: 10px 20px ;
+}
+.addr-mk .addr-list .addr-item{
+  margin: 0 0 15px 0;
+}
+.addr-mk .addr-list .addr-item input{
+  width: 30px;
+}
+/* 配送 */
+.details-l .psfs{
+  border: 1px solid #e2e2e2;
+  border-top: none;
+  padding: 0 0 10px 20px;
+  line-height: 35px;
+}
+.details-l .psfs .mfkd span{
+  display: inline-block;
+  line-height: 28px;
+  vertical-align: middle;
+  margin-right: 30px;
+}
+/* 支付按钮 */
+.details-l .pay-btn{
+  border: 1px solid #e2e2e2;
+  border-top: none;
+  padding: 20px 0;
+  text-align: center;
+  overflow: hidden;
+}
+.details-l .pay-btn button{
+  width: 500px;
+  height: 50px;
+  margin: auto;
+  color: #FFF;
+  outline: none;
+  border: 1px solid #c40d2e;
+  background-color: transparent;
+  position: relative;
+  overflow: hidden;
+}
+.details-l .pay-btn .yy{
+  width: 500px;
+  height: 50px;
+  margin: auto;
+  background-color: #c40d2e;
+  position: absolute;
+  top: 0;
+  left: 0;
+  
+  z-index: -1;
+}
+.details-l .pay-btn a button:hover .yy{
+  transform: translateY(-101%);
+  transition: all .6s;
+} 
+.details-l .pay-btn a button:hover{
+  color: #c40d2e;
+  transition: all .3s;
+}
+/* 右边 */
+/* 上 */
+.details-r .r-top,
+.details-r .r-bottom{
+  border: 1px solid #e2e2e2;
+  margin:0 0 50px;
+}
+.details-r .r-top .indent-details p{
+  color: #555;
+  padding: 0 20px;
+  line-height: 50px;
+  background-color: #f5f5f5;
+}
+/* 订单详情 */
+.details-r .r-top .indent-item{
+  display: flex;
+}
+/* 左边图片 */
+.details-r .r-top .indent-item .product-pic{
+  /* background-color: #000; */
+  width: 30%;
+  display: flex;
+  align-items: center;
+}
+.details-r .r-top .indent-item img{
+  display: block;
+  width: 100px;
+  height: 100px;
+  margin: auto;
+  background-color: #eee;
+  padding: 10px;
+}
+/* 右边详情 */
+.details-r .r-top .indent-item .product-detail{
+  margin: 0 0 0 20px;
+}
+.details-r .r-top .indent-item .product-detail h5{
+  color: #555;
+  font-weight: 500;
+  font-size: 16px;
+  margin: 30px 0 10px 0;
+}
+/* 表壳表带... */
+.details-r .r-top .indent-item .product-detail>p{
+  font-size: 14px;
+  margin: 5px 0 ;
+}
+.details-r .r-top .indent-item .product-detail .p-price{
+  margin: 20px 0 ;
+}
+/* 单个商品价格 */
+.details-r .r-top .indent-item .product-detail .product-price{
+  display: flex;
+  justify-content: space-between;
+}
+.details-r .r-top .indent-item .product-detail .product-price .subtotal{
+  text-align: right;
+}
+.details-r .r-top .indent-item{
+  padding-bottom: 20px;
+  border-bottom: 1px solid #e2e2e2;
+}
+.details-r .r-top .total{
+  padding: 20px;
+  background-color: #f9f9f9;
+  margin: -1.5px 0 0 0;
+}
+.details-r .r-top .total>div{
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+.details-r .r-top .total>div:last-child{
+  font-size: 18px;
+  margin: 30px 0 0;
+  font-weight: 700;
+}
+/* 下边 */
+.details-r .r-bottom{
+  border: 1px solid #e2e2e2;
+  background-color: #f9f9f9;
+  border-bottom: none;
+  /* padding: 30px; */
+}
+/* 统一样式 */
+.details-r .r-bottom .help,
+.details-r .r-bottom .payment,
+.details-r .r-bottom .zxfw{
+  border-bottom: 1px solid #e2e2e2;
+  padding: 30px;
+
+}
+/* help */
+.details-r .r-bottom h5{
+  color: #c40d2e;
+  margin: 0 0 20px ;
+}
+.details-r .r-bottom .help h6{
+  margin: 20px 0 3px;
+  letter-spacing: .2em;
+  font-size: 14px;
+}
+.details-r .r-bottom .help span:last-child{
+  font-size: 14px;
+}
+/* 支付方式 */
+.details-r .r-bottom .payment img{
+  width: 90%;
+}
+/* 尊享服务 */
+.details-r .r-bottom .zxfw ul li{
+  font-size: 14px;
+  line-height: 30px;
+}
